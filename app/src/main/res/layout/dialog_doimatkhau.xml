@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/securities"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/edtPassOld"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mật khẩu cũ"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_edtpassword"/>
+    <EditText
+        android:id="@+id/edtPassNew"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mật khẩu mới"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:background="@drawable/custom_edtpassword"/>
+    <EditText
+        android:id="@+id/edtRePassNew"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập lại mật khẩu"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:inputType="textPassword"
+        android:background="@drawable/custom_edtpassword"/>
+
+</LinearLayout>

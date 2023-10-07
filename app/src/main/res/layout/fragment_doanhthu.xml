@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bắt đầu từ: "
+        android:textSize="25sp"
+        android:textColor="#FF9800"
+        android:fontFamily="@font/quicksandbold"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/edtNgayBatDau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Chọn ngày bắt đầu"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_edtdoanhthu"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đến ngày: "
+        android:textSize="25sp"
+        android:textColor="#FF9800"
+        android:fontFamily="@font/quicksandbold"
+        android:layout_marginLeft="10dp"/>
+
+    <EditText
+        android:id="@+id/edtNgayKetThuc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Chọn ngày kết thúc"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_edtdoanhthu"/>
+
+    <Button
+        android:id="@+id/btnThongKe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thống kê"
+        android:textSize="30sp"
+        android:fontFamily="@font/quicksandbold"
+        android:backgroundTint="#FF9800"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/txtKetQua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kết quả"
+        android:textSize="25sp"
+        android:textColor="#00BCD4"
+        android:fontFamily="@font/quicksandbold"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>

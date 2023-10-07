@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cập nhật thành viên"
+        android:textSize="30sp"
+        android:textColor="#00BCD4"
+        android:fontFamily="@font/quicksandbold"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtMaTVUp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/quicksandbold"/>
+
+    <EditText
+        android:id="@+id/edtHoTenUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Nhập họ tên"
+        android:background="@drawable/custom_dialogcapnhattv"/>
+
+    <EditText
+        android:id="@+id/edtNamSinhUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Nhập năm sinh"
+        android:background="@drawable/custom_dialogcapnhattv"/>
+
+
+</LinearLayout>

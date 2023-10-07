@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thêm sách mới"
+        android:textSize="30sp"
+        android:textColor="#1BD523"
+        android:fontFamily="@font/quicksandbold"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/edtTenSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Nhập tên sách"
+        android:background="@drawable/custom_edtdialogthemsach"/>
+
+    <EditText
+        android:id="@+id/edtGiaThueSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Nhập giá thuê"
+        android:background="@drawable/custom_edtdialogthemsach"/>
+    <Spinner
+        android:id="@+id/spnLoaiSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/custom_edtdialogthemsach"/>
+
+
+</LinearLayout>
