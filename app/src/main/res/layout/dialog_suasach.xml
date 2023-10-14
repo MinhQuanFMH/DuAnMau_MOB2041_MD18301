@@ -38,11 +38,20 @@
         android:layout_marginTop="15dp"
         android:hint="Nhập giá thuê"
         android:background="@drawable/custom_edtdialogthemsach"/>
+
     <Spinner
         android:id="@+id/spnLoaiSachUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:background="@drawable/custom_edtdialogthemsach"/>
+
+    <EditText
+        android:id="@+id/edtNamXbUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Nhập năm xuất bản"
         android:background="@drawable/custom_edtdialogthemsach"/>
 
 

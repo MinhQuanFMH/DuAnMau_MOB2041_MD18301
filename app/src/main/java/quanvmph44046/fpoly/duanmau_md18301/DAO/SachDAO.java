@@ -23,7 +23,7 @@ public class SachDAO {
     public ArrayList<Sach> getDSDauSach() {
         ArrayList<Sach> list = new ArrayList<>();
         sqLiteDatabase = dbHelper.getReadableDatabase(); // Đọc database
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT sc.masach, sc.tensach, sc.giathue, sc.maloai, ls.tenloai" +
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT sc.masach, sc.tensach, sc.giathue, sc.maloai, ls.tenloai, sc.namxb" +
                 " FROM SACH sc, LOAISACH ls" +
                 " WHERE sc.maloai = ls.maloai", null);
 
@@ -34,30 +34,33 @@ public class SachDAO {
                         cursor.getString(1), // Tên sách
                         cursor.getInt(2), // Tiền thuê
                         cursor.getInt(3),// Mã loại
-                        cursor.getString(4))); // Tên loại
+                        cursor.getString(4),// Tên loại
+                        cursor.getInt(5))); // Năm xuất bản
             }while (cursor.moveToNext());
         }
         return list;
     }
 
-    public boolean themSachMoi(String tensach, int giathue, int maloai){
+    public boolean themSachMoi(String tensach, int giathue, int maloai, int namxb){
         SQLiteDatabase database = dbHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("tensach", tensach);
         contentValues.put("giathue", giathue);
         contentValues.put("maloai", maloai);
+        contentValues.put("namxb", namxb);
         long check = database.insert("SACH", null, contentValues);
         if(check == -1)
             return false;
         return true;
     }
 
-    public boolean capNhatSach(int masach, String tensach, int giathue, int maloai) {
+    public boolean capNhatSach(int masach, String tensach, int giathue, int maloai, int namxb) {
         SQLiteDatabase LiteDatabase = dbHelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("tensach", tensach);
         contentValues.put("giathue", giathue);
         contentValues.put("maloai", maloai);
+        contentValues.put("namxb", namxb);
 
         long check = LiteDatabase.update("SACH", contentValues, "masach = ?",
                 new String[]{String.valueOf(masach)});

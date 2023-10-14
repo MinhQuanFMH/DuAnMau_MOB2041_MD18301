@@ -70,6 +70,7 @@ public class QLSachFragment extends Fragment {
 
         EditText edtTenSach = view.findViewById(R.id.edtTenSach);
         EditText edtGiaThueSach = view.findViewById(R.id.edtGiaThueSach);
+        EditText edtNamXb = view.findViewById(R.id.edtNamXb);
         Spinner spnLoaiSach = view.findViewById(R.id.spnLoaiSach);
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(
@@ -86,10 +87,11 @@ public class QLSachFragment extends Fragment {
             public void onClick(DialogInterface dialog, int which) {
                 String tensach = edtTenSach.getText().toString();
                 int giathue = Integer.parseInt(edtGiaThueSach.getText().toString());
+                int namxb = Integer.parseInt(edtNamXb.getText().toString());
                 HashMap<String, Object> hm = (HashMap<String, Object>) spnLoaiSach.getSelectedItem();
                 int maloai = (int) hm.get("maloai");
 
-                boolean check = sachDAO.themSachMoi(tensach, giathue, maloai);
+                boolean check = sachDAO.themSachMoi(tensach, giathue, maloai, namxb);
                 if(check == true){
                     Toast.makeText(getContext(), "Thêm sách mới thành công", Toast.LENGTH_SHORT).show();
                     loadDaTa();

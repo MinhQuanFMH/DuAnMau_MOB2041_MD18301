@@ -14,6 +14,7 @@ public class ThanhVien {
         this.namsinh = namsinh;
     }
 
+
     public int getMatv() {
         return matv;
     }

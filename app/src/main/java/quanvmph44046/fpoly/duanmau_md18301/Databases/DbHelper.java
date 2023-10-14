@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
     public static final String DB_NAME = "QUANLYTHUVIEN";
-    public static final int DB_VERSION = 1;
+    public static final int DB_VERSION = 3;
     public DbHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
@@ -20,6 +20,7 @@ public class DbHelper extends SQLiteOpenHelper {
     String tableSach = "CREATE TABLE SACH(masach INTEGER PRIMARY KEY AUTOINCREMENT," +
             " tensach TEXT," +
             " giathue INTEGER," +
+            " namxb INTEGER," +
             " maloai INTEGER REFERENCES lOAISACH(maloai))";
     db.execSQL(tableSach);
         // Tạo bảng thủ thư
@@ -44,7 +45,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
      // Data mẫu
         db.execSQL("INSERT INTO LOAISACH VALUES (1, 'CNTT'),(2,'Ẩm thực'),(3, 'Kinh tế')");
-        db.execSQL("INSERT INTO SACH VALUES (1, 'Lập trình Android', 5500, 1), (2, 'Nấu ăn ngon', 4000, 1), (3, 'Kinh tế vĩ mô', 6000, 3)");
+        db.execSQL("INSERT INTO SACH VALUES (1, 'Lập trình Android', 5500, 2017, 1), (2, 'Nấu ăn ngon', 4000, 2022, 1), (3, 'Kinh tế vĩ mô', 6000, 2023, 3)");
         db.execSQL("INSERT INTO THUTHU VALUES ('thuthu01','Vũ Minh Quân','abc123'),('thuthu02','Trần Xuân Hưng','123abc')");
         db.execSQL("INSERT INTO THANHVIEN VALUES (1,'An Đức Anh','2004'),(2,'Nguyễn Đức Vũ','2002')");
         //trả sách: 1: đã trả - 0: chưa trả
